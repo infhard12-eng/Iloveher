@@ -1,1 +1,277 @@
-# Iloveher
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Bachyyyy 💛</title>
+<style>
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0; font-family: Arial, Helvetica, sans-serif; color: #342b38;
+  background: linear-gradient(135deg, #fff0f4, #fff3df, #eee7ff);
+  text-align: center; overflow-x: hidden;
+}
+.hero {
+  min-height: 100vh; display: flex; flex-direction: column;
+  align-items: center; justify-content: center; padding: 30px 20px;
+  position: relative;
+}
+.hero h1 { font-size: clamp(3rem, 12vw, 6rem); margin: 0 0 12px; }
+.hero p { max-width: 650px; font-size: 1.2rem; line-height: 1.7; }
+.heart { font-size: 4rem; animation: beat 1s infinite alternate; margin: 20px; }
+@keyframes beat { from { transform: scale(1); } to { transform: scale(1.18); } }
+button {
+  border: 0; border-radius: 999px; padding: 16px 28px; font-size: 1.05rem;
+  cursor: pointer; background: #f26d8c; color: white; box-shadow: 0 8px 24px rgba(150,50,80,.25);
+}
+button:active { transform: scale(.97); }
+section { max-width: 950px; margin: auto; padding: 70px 20px; }
+h2 { font-size: clamp(2rem, 7vw, 3rem); margin-bottom: 22px; }
+.card {
+  background: rgba(255,255,255,.82); border-radius: 24px; padding: 28px;
+  box-shadow: 0 10px 35px rgba(60,30,50,.10); line-height: 1.8; font-size: 1.08rem;
+}
+.gallery {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(190px,1fr));
+  gap: 18px; margin-top: 25px;
+}
+.gallery img {
+  width: 100%; height: 300px; object-fit: cover; border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0,0,0,.13); transition: transform .3s;
+}
+.gallery img:hover { transform: translateY(-6px) rotate(1deg); }
+.music { margin-top: 15px; width: min(100%, 450px); }
+#surprise {
+  display: none; position: fixed; inset: 0; z-index: 10; overflow-y: auto;
+  background: linear-gradient(135deg, rgba(255,230,239,.98), rgba(255,243,213,.98));
+  padding: 35px 20px;
+}
+.surprise-box {
+  max-width: 720px; margin: 40px auto; background: white; border-radius: 28px;
+  padding: 35px 24px; box-shadow: 0 15px 50px rgba(80,30,60,.18);
+}
+.surprise-box h2 { margin-top: 0; }
+#message { font-size: 1.15rem; line-height: 1.8; min-height: 80px; }
+.close { background: #5b5366; margin-top: 20px; }
+.sparkle { position: fixed; pointer-events: none; font-size: 24px; animation: float 3s ease-in forwards; z-index: 20; }
+@keyframes float { to { transform: translateY(-120px) rotate(180deg); opacity: 0; } }
+footer { padding: 35px 20px; opacity: .7; }
+.small { font-size: .95rem; opacity: .75; }
+
+.heart-memory {
+  width: 100%;
+  max-width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin: 15px auto;
+  display: block;
+  box-shadow: 0 8px 20px rgba(150, 50, 80, 0.25);
+}
+
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <h1>For Bachyyyy 💛</h1>
+  <p>A small corner of the internet made especially for someone very special.</p>
+  <div class="heart">💛</div>
+  <button onclick="openSurprise()">✨ Click for a Special Surprise ✨</button>
+</header>
+
+<section>
+  <h2>A Message for You 💌</h2>
+  <div class="card">
+    Dear Bachyyyy,<br><br>
+    I made this little website as a collection of sweet memories, funny moments,
+    and things that make you special. I hope it brings a smile to your face. 💛
+  </div>
+</section>
+
+<section>
+ <div class="gallery">
+  <img src="memory1.jpeg" alt="A special memory">
+  <img src="memory2.jpeg" alt="A special memory">
+  <img src="memory3.jpeg" alt="A special memory">
+  <img src="memory4.jpeg" alt="A special memory">
+</div>
+</section>
+
+</body>
+
+<section>
+
+  <h2>More Surprises for Bachyyyy ✨</h2>
+
+  <button onclick="showSweetMessage()">
+
+    💌 Open a Sweet Message
+
+  </button>
+
+  <button onclick="showMemory()">
+
+    🌸 A Special Memory
+
+  </button>
+
+  <!-- First surprise: 2 photos -->
+
+  <div id="sweet-surprise" style="display: none; margin-top: 25px;">
+
+    <p>Bachyyyy, I hope you always remember how special and appreciated you are. 💛✨</p>
+
+    <img src="Memory9.jpeg" alt="Special memory" width="45%">
+
+    <img src="Memory8.jpeg" alt="Special memory" width="45%">
+
+  </div>
+
+  <!-- Second surprise: 2 photos -->
+
+  <div id="memory-surprise" style="display: none; margin-top: 25px;">
+
+    <p>The best memories are the little moments that make us smile and laugh. 🌸💫</p>
+
+    <img src="Memory5.jpeg" alt="Memory" width="45%">
+
+    <img src="memory11.jpeg" alt="Memory" width="45%">
+
+  </div>
+
+</section>
+</body>
+
+<script>
+function showSweetMessage() {
+  document.getElementById("sweet-surprise").style.display = "block";
+  document.getElementById("memory-surprise").style.display = "none";
+}
+
+function showMemory() {
+  document.getElementById("memory-surprise").style.display = "block";
+  document.getElementById("sweet-surprise").style.display = "none";
+}
+</script>
+
+<section>
+  <h2>Our Song 🎵</h2>
+  <div class="card">
+    <p>This song is here for a special moment. 💛</p>
+    <audio class="music" controls preload="metadata">
+      <source src="Lovesong.m4a" type="audio/mp4">
+      Your browser does not support audio playback.
+    </audio>
+    <p class="small"
+  </div>
+</section>
+
+<section>
+  <h2>Just One More Thing... 💛</h2>
+  <p class="card">No website could hold every memory, but this can always be a small reminder of the moments worth keeping.</p>
+</section>
+
+<div class="heart-card">
+  <div class="heart-icon">💛</div>
+
+  <h2>One Last Special Memory 💛</h2>
+
+  <img src="memory10.jpeg"
+       alt="Our special memory"
+       class="heart-memory">
+<body>
+  <p>
+    One more special memory to keep here forever. ✨🌸
+  </p>
+
+  <div class="small-hearts">💛 ✨ 🌸 💛</div>
+</div>
+</body>
+<footer>Made with care for Bachyyyy 💛</footer>
+
+<div id="surprise">
+  <div class="surprise-box">
+    <div class="heart">💛✨💛</div>
+    <h2>A Special Surprise!</h2>
+    <p id="message"></p>
+    <div class="gallery">
+      <img src="Memory6.jpeg" alt="Special memory">
+      <img src="Memoryunlimited.jpeg" alt="Special memory">
+    </div>
+
+<section>
+  <h2>A Special Video for Bachyyyy 🎥💛</h2>
+
+  <video controls width="100%" style="max-width: 600px; border-radius: 20px;">
+    <source src="Memory7.MOV" type="video/mp4">
+    Your browser does not support video playback.
+  </video>
+</section>
+
+ <p class="card"> Bachyyyy, you are someone truly special to me.
+
+Your smile, your personality, and all the little things that make you who you are can brighten a moment.
+
+I appreciate the memories, the laughs, and every little conversation we share.
+
+Never forget how amazing and unique you are. Keep being yourself, because that's the person who makes you special. 💛</p>
+
+    <br>
+
+<div id="last-surprise-image" style="display: none; margin-top: 25px;">
+  <h2>One Last Surprise for You 💛✨</h2>
+  <p>And finally... one more special memory to make you smile. 🌸</p>
+
+  <img id="flying-photo"
+       src="memory10.jpeg"
+       alt="One last special memory"
+       style="width: 100%; max-width: 500px; border-radius: 20px;">
+</div>
+
+    <button onclick="nextMessage()">💌 Another Surprise</button>
+
+    <br>
+    <button class="close" onclick="closeSurprise()">Close</button>
+  </div>
+</div>
+
+<script>
+const messages = [
+  "You deserve to be celebrated for all the little things that make you uniquely you. 🌻",
+  "A collection of memories is better when there are always more happy moments to add. ✨",
+  "Never stop being wonderfully weird, funny, and completely yourself. 💛",
+  "This page will always have room for another photo, another memory, and another reason to smile. 🌸"
+];
+let messageIndex = 0;
+
+function openSurprise() {
+  document.getElementById('surprise').style.display = 'block';
+  messageIndex = Math.floor(Math.random() * messages.length);
+  document.getElementById('message').textContent = messages[messageIndex];
+  makeSparkles();
+}
+function closeSurprise() {
+  document.getElementById('surprise').style.display = 'none';
+}
+function nextMessage() {
+  messageIndex = (messageIndex + 1) % messages.length;
+  document.getElementById('message').textContent = messages[messageIndex];
+  makeSparkles();
+}
+function makeSparkles() {
+  const symbols = ['✨','💛','🌸','⭐','💋','♾️','🐼🌺'];
+  for (let i = 0; i < 18; i++) {
+    const s = document.createElement('div');
+    s.className = 'sparkle';
+    s.textContent = symbols[Math.floor(Math.random()*symbols.length)];
+    s.style.left = Math.random()*100 + 'vw';
+    s.style.top = (50 + Math.random()*40) + 'vh';
+    document.body.appendChild(s);
+    setTimeout(() => s.remove(), 3000);
+  }
+}
+</script>
+</body>
+</html>
